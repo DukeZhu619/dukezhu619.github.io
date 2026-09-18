@@ -53,22 +53,27 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--duke-accent); o
 .layout > .aside-content { width: 260px; padding-left: 0; }
 .layout > div:first-child { width: calc(100% - 290px); }
 .layout.hide-aside > div:first-child { width: 100%; }
-#recent-posts .recent-post-items { gap: 0; }
+#recent-posts .recent-post-items { display: grid; gap: 22px; }
 #recent-posts > .recent-post-items > .recent-post-item {
-  border-radius: 0; border-bottom: 1px solid var(--duke-line);
-  background: transparent; box-shadow: none; min-height: 0; height: auto; margin: 0;
+  flex-direction: row; align-items: stretch;
+  border-radius: 12px; border: 1px solid var(--duke-line);
+  background: var(--duke-card); box-shadow: 0 3px 12px rgba(52,54,47,.025);
+  min-height: 210px; height: auto; margin: 0;
 }
 #recent-posts > .recent-post-items > .recent-post-item > .recent-post-info {
-  width: 100%; padding: 27px 0 29px; height: auto;
+  display: flex; flex-direction: column; justify-content: center;
+  flex: 1; min-width: 0; width: auto; padding: 25px 28px; height: auto;
 }
-#recent-posts .recent-post-item:first-child > .recent-post-info { padding-top: 4px; }
-#recent-posts .recent-post-item .article-title { color: var(--duke-ink); font-size: 23px; line-height: 1.55; font-weight: 550; -webkit-line-clamp: 2; }
-#recent-posts .recent-post-item .article-title:hover { color: var(--duke-accent); }
-#recent-posts .recent-post-item .article-meta-wrap { margin: 10px 0 9px; color: var(--duke-muted); font-size: 12px; }
+#recent-posts .recent-post-info .article-title { color: var(--duke-ink); font-weight: 600; }
+#recent-posts .recent-post-item .recent-post-info > .article-title { font-size: 21px; line-height: 1.5; -webkit-line-clamp: 3; }
+#recent-posts .recent-post-info .article-title:hover { color: var(--duke-accent); }
+#recent-posts .recent-post-item .recent-post-info > .article-meta-wrap { margin: 10px 0 9px; color: var(--duke-muted); font-size: 12px; }
 #recent-posts .recent-post-item .article-meta-wrap i { display: none; }
-#recent-posts .recent-post-item .content { color: var(--duke-muted); line-height: 1.9; -webkit-line-clamp: 2; }
-#recent-posts .recent-post-item .post_cover { flex: 0 0 32%; margin: 24px 24px 24px 0; height: 180px; border-radius: 8px; }
-#recent-posts .recent-post-item:has(.post_cover) .recent-post-info { width: 68%; }
+#recent-posts .recent-post-item .recent-post-info > .content { color: var(--duke-muted); font-size: 14px; line-height: 1.85; -webkit-line-clamp: 2; }
+#recent-posts .recent-post-item .post_cover { flex: 0 0 34%; width: 34%; margin: 0; height: auto; border-radius: 0; }
+#recent-posts .recent-post-item .post_cover a { display: block; height: 100%; }
+#recent-posts .recent-post-item .post_cover .post-bg { min-height: 210px; object-fit: cover; transition: transform .5s ease; }
+#recent-posts .recent-post-item:hover .post-bg { transform: scale(1.035); }
 #aside-content .card-widget { padding: 25px; border: 1px solid var(--duke-line); box-shadow: none; border-radius: 10px; margin-top: 22px; }
 #aside-content .card-widget:first-child { margin-top: 0; }
 #aside-content .card-info img { width: 76px; height: 76px; border-radius: 50%; }
@@ -135,10 +140,11 @@ hr { border: 0; border-top: 1px solid var(--duke-line); }
   #page-header.full_page { height: 310px; }
   #site-subtitle { font-size: 13px !important; letter-spacing: .08em; }
   .layout { padding: 26px 18px 36px; }
-  #recent-posts .recent-post-item .article-title { font-size: 20px; }
-  #recent-posts .recent-post-item .content { font-size: 14px; }
-  #recent-posts .recent-post-item .post_cover { flex-basis: auto; width: 100%; height: 180px; margin: 12px 0 0; }
-  #recent-posts .recent-post-item:has(.post_cover) .recent-post-info { width: 100%; }
+  #recent-posts .recent-post-item .recent-post-info > .article-title { font-size: 20px; }
+  #recent-posts > .recent-post-items > .recent-post-item { flex-direction: column; }
+  #recent-posts > .recent-post-items > .recent-post-item > .recent-post-info { padding: 21px 22px 24px; }
+  #recent-posts .recent-post-item .post_cover { flex-basis: auto; width: 100%; height: auto; aspect-ratio: 3 / 2; }
+  #recent-posts .recent-post-item .post_cover .post-bg { min-height: 0; }
   #post, #page, #archive, #tag, #category { padding: 25px 19px; }
   #article-container { font-size: 15px; }
   .about-profile { gap: 16px; }

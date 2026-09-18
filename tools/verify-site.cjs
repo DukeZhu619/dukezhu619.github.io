@@ -41,6 +41,16 @@ for (const asset of ['katex.min.css', 'fonts/KaTeX_Main-Regular.woff2', 'fonts/K
   assert.ok(exists(`public/vendor/katex/${asset}`), `Missing local formula asset: ${asset}`);
 }
 const home = read('public/index.html');
+for (const page of [home, read('public/about/index.html')]) {
+  assert.ok(!page.includes('学习、研究，和沿途的风景。'), 'Removed tagline is still present.');
+}
+const homeCovers = [...home.matchAll(/class="post-bg" src="([^"]+)"/g)];
+assert.ok(homeCovers.length > 0, 'Missing homepage article illustrations.');
+for (const [, url] of homeCovers) {
+  if (url.startsWith('/images/covers/')) {
+    assert.ok(exists(`public${url}`), `Missing article illustration: ${url}`);
+  }
+}
 if (theme.footer.launch_at) {
   assert.ok(exists('public/js/site-journey.js'), 'Missing footer timer script.');
   assert.equal((home.match(/data-launch-at=/g) || []).length, 1, 'Expected one footer timer.');
@@ -55,4 +65,4 @@ if (theme.visitor_map.script_url) {
 if (!theme.twikoo.envId && !process.env.TWIKOO_ENV_ID) {
   assert.ok(!home.includes('twikoo.init('), 'Comments must stay disabled without a service.');
 }
-console.log(`Verified ${files.length} stable article URLs, ${mathPosts} articles with formulas, navigation pages, search, local math assets and visitor embed.`);
+console.log(`Verified ${files.length} stable article URLs, ${mathPosts} articles with formulas, ${homeCovers.length} homepage covers, navigation pages, search, local math assets and visitor embed.`);

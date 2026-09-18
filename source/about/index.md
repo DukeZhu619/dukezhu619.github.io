@@ -10,7 +10,7 @@ comments: false
 
 <div class="about-profile">
   <img src="/images/LeBlaine.jpg" alt="Duke Zhu 的头像" width="92" height="92">
-  <div><strong>Duke Zhu</strong><p>学习、研究，和沿途的风景。</p><p><a href="https://github.com/DukeZhu619">GitHub</a><a href="mailto:duke-zhu@outlook.com">Email</a></p></div>
+  <div><strong>Duke Zhu</strong><p><a href="https://github.com/DukeZhu619">GitHub</a><a href="mailto:duke-zhu@outlook.com">Email</a></p></div>
 </div>
 
 ## 👨‍💻 关于我

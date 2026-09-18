@@ -24,10 +24,9 @@ category_img: false
 footer_img: false
 background: false
 subtitle:
-  enable: true
+  enable: false
   effect: false
-  sub:
-    - 学习、研究，和沿途的风景。
+  sub: []
 index_layout: 1
 index_post_content:
   method: 2
@@ -184,7 +183,7 @@ font:
   code_font_family: '"Cascadia Code", "SFMono-Regular", Consolas, monospace'
 inject:
   head:
-    - '<link rel="stylesheet" href="/css/duke.css?v=20260918-3">'
+    - '<link rel="stylesheet" href="/css/duke.css?v=20260918-4">'
   bottom:
     - '<script defer src="/js/site-journey.js"></script>'
 CDN:
