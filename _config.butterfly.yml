@@ -17,6 +17,7 @@ social:
   fas fa-envelope: mailto:duke-zhu@outlook.com || Email
 
 index_img: /images/robot-coastal-workshop.jpg
+hero_title: Learning how the world works.
 default_top_img: false
 archive_img: false
 tag_img: false
@@ -183,7 +184,7 @@ font:
   code_font_family: '"Cascadia Code", "SFMono-Regular", Consolas, monospace'
 inject:
   head:
-    - '<link rel="stylesheet" href="/css/duke.css?v=20260918-5">'
+    - '<link rel="stylesheet" href="/css/duke.css?v=20260918-6">'
   bottom:
     - '<script defer src="/js/site-journey.js"></script>'
 CDN:

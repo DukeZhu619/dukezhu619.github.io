@@ -4,6 +4,14 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { escapeHTML } = require('hexo-util');
 
+// Keep the navigation/site name, but give Butterfly's home hero its own heading.
+hexo.extend.filter.register('after_render:html', html => {
+  const title = hexo.theme.config.hero_title;
+  if (hexo.config.theme !== 'butterfly' || !title) return html;
+  return html.replace(/(<div id="site-info">\s*<h1 id="site-title">)[\s\S]*?(<\/h1>)/,
+    (_match, opening, closing) => `${opening}${escapeHTML(title)}${closing}`);
+});
+
 // Ship the exact fonts/CSS belonging to the build-time KaTeX renderer.
 hexo.extend.generator.register('local-katex-assets', () => {
   const katexRoot = path.dirname(require.resolve('katex/package.json', {
