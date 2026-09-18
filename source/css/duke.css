@@ -108,6 +108,9 @@ hr { border: 0; border-top: 1px solid var(--duke-line); }
 #footer .footer-other { padding: 30px 20px; }
 #footer a, #footer .footer-copyright { color: var(--duke-muted); font-size: 12px; }
 .footer-note { font-size: 12px; letter-spacing: .15em; }
+.site-journey { margin: 14px auto 0; color: var(--duke-muted); font-size: 12px; line-height: 2; }
+.site-journey p { margin: 0; }
+.site-runtime { font-variant-numeric: tabular-nums; }
 .visitor-map { max-width: 320px; margin: 0 auto; padding: 28px 24px 5px; text-align: center; }
 .visitor-map h2 { color: var(--duke-ink); font-size: 17px; font-weight: 500; margin: 0 0 16px; }
 .visitor-map p { color: var(--duke-muted); font-size: 12px; }

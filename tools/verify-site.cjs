@@ -41,6 +41,13 @@ for (const asset of ['katex.min.css', 'fonts/KaTeX_Main-Regular.woff2', 'fonts/K
   assert.ok(exists(`public/vendor/katex/${asset}`), `Missing local formula asset: ${asset}`);
 }
 const home = read('public/index.html');
+if (theme.footer.launch_at) {
+  assert.ok(exists('public/js/site-journey.js'), 'Missing footer timer script.');
+  assert.equal((home.match(/data-launch-at=/g) || []).length, 1, 'Expected one footer timer.');
+  assert.ok(home.includes(new Date(theme.footer.launch_at).toISOString()), 'Incorrect timer origin.');
+  assert.ok(home.includes('已航行'), 'Missing elapsed-time label.');
+  assert.ok(!home.includes('启航于'), 'The launch date must not be displayed.');
+}
 if (theme.visitor_map.script_url) {
   assert.equal((home.match(/id="mmvst_globe"/g) || []).length, 1, 'Expected one visitor globe.');
   assert.ok(unescapeHTML(home).includes(theme.visitor_map.script_url), 'Missing visitor map URL.');

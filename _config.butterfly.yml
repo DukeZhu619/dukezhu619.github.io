@@ -157,6 +157,8 @@ visitor_map:
   script_url: 'https://mapmyvisitors.com/globe.js?d=vFjHOz1OZ6Wug0yG7h_AyRTALPEglf0DxUZ-B-0o4Ss'
 
 footer:
+  # Earliest retained repository commit; used only to calculate elapsed time.
+  launch_at: '2025-03-16T14:40:40+08:00'
   owner:
     enable: true
     since: 2025
@@ -182,7 +184,9 @@ font:
   code_font_family: '"Cascadia Code", "SFMono-Regular", Consolas, monospace'
 inject:
   head:
-    - '<link rel="stylesheet" href="/css/duke.css?v=20260918-2">'
+    - '<link rel="stylesheet" href="/css/duke.css?v=20260918-3">'
+  bottom:
+    - '<script defer src="/js/site-journey.js"></script>'
 CDN:
   internal_provider: local
   third_party_provider: jsdelivr

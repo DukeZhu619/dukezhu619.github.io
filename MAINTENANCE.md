@@ -16,6 +16,7 @@
 - 自定义样式在 `source/css/duke.css`，不直接修改主题包。
 - 数学由 `@traptitech/markdown-it-katex` 构建时渲染，字体和样式随网站发布。
 - `scripts/site-assets.js` 负责公式资源和外部服务配置。
+- 页脚仅显示“已航行”的动态时长。计时起点在 `_config.butterfly.yml` 的 `footer.launch_at`，暂采用仓库最早保留的提交时间 `2025-03-16T14:40:40+08:00`，不代表已核实的首次建站时间；`source/js/site-journey.js` 每秒更新显示。
 
 ## 评论与访客地图
 
