@@ -25,6 +25,12 @@
   --text-highlight-color: var(--duke-ink);
 }
 body { background: var(--duke-paper); color: var(--duke-ink); }
+/* A transparent page-scrollbar track exposed the pale body beside the cover. */
+@supports not selector(::-webkit-scrollbar) {
+  html, body { scrollbar-color: #9ba69e #293831; }
+}
+html::-webkit-scrollbar-track, body::-webkit-scrollbar-track { background: #293831; }
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb { background: #9ba69e; border-radius: 8px; }
 a { transition: color .18s ease; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--duke-accent); outline-offset: 4px; }
 #nav { height: 72px; padding: 0 max(5vw, 24px); }
@@ -35,8 +41,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--duke-accent); o
 #page-header.nav-fixed #nav { background: var(--duke-card); box-shadow: 0 1px 0 var(--duke-line); }
 #page-header.not-top-img { height: 76px; background: var(--duke-paper); }
 #page-header.not-top-img #nav a { color: var(--duke-ink); }
-#page-header.full_page { height: 430px; min-height: 0; background-position: center 44%; }
-#page-header.full_page:before { background: linear-gradient(90deg, rgba(18,32,31,.64), rgba(18,32,31,.12)); }
+#page-header.full_page { height: 430px; min-height: 0; background-attachment: scroll; background-position: center 56%; }
+#page-header.full_page:before { background: linear-gradient(90deg, rgba(18,27,30,.48), rgba(18,27,30,.12)), linear-gradient(180deg, rgba(18,27,30,.32), transparent 45%); }
 #page-header.full_page #site-info { top: auto; bottom: 70px; left: max(calc((100% - 1160px) / 2), 6vw); right: 6vw; width: auto; padding: 0; text-align: left; }
 #page-header #site-title, #page-header #site-subtitle { text-align: left; }
 #page-header #site_social_icons { display: none; }

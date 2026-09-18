@@ -16,7 +16,7 @@ social:
   fab fa-github: https://github.com/DukeZhu619 || GitHub
   fas fa-envelope: mailto:duke-zhu@outlook.com || Email
 
-index_img: /images/Lakeside.jpg
+index_img: /images/sea.jpg
 default_top_img: false
 archive_img: false
 tag_img: false
@@ -182,7 +182,7 @@ font:
   code_font_family: '"Cascadia Code", "SFMono-Regular", Consolas, monospace'
 inject:
   head:
-    - '<link rel="stylesheet" href="/css/duke.css">'
+    - '<link rel="stylesheet" href="/css/duke.css?v=20260918-2">'
 CDN:
   internal_provider: local
   third_party_provider: jsdelivr
