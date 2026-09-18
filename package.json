@@ -4,27 +4,28 @@
   "private": true,
   "scripts": {
     "build": "hexo generate",
+    "verify": "node tools/verify-site.cjs",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server"
   },
   "hexo": {
-    "version": "7.3.0"
+    "version": "8.1.2"
   },
   "dependencies": {
     "@traptitech/markdown-it-katex": "^3.6.0",
-    "@upupming/hexo-renderer-markdown-it-plus": "^2.0.2",
     "hexo": "^8.1.2",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
+    "hexo-generator-searchdb": "^1.5.0",
     "hexo-generator-tag": "^2.0.0",
-    "hexo-math": "^5.0.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-markdown-it": "^7.1.1",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
+    "hexo-theme-butterfly": "5.7.0",
     "hexo-theme-fluid": "^1.9.9",
     "hexo-theme-landscape": "^1.0.0",
     "highlight.js": "^11.12.0",

@@ -1,0 +1,191 @@
+# Keep overrides here so Butterfly can be updated without editing its source.
+nav:
+  display_title: true
+  display_post_title: false
+  fixed: true
+menu:
+  首页: / || fas fa-house
+  文章: /archives/ || fas fa-book-open
+  分类: /categories/ || fas fa-folder-open
+  关于: /about/ || fas fa-user
+favicon: /images/LeBlaine.jpg
+avatar:
+  img: /images/LeBlaine.jpg
+  effect: false
+social:
+  fab fa-github: https://github.com/DukeZhu619 || GitHub
+  fas fa-envelope: mailto:duke-zhu@outlook.com || Email
+
+index_img: /images/Lakeside.jpg
+default_top_img: false
+archive_img: false
+tag_img: false
+category_img: false
+footer_img: false
+background: false
+subtitle:
+  enable: true
+  effect: false
+  sub:
+    - 学习、研究，和沿途的风景。
+index_layout: 1
+index_post_content:
+  method: 2
+  length: 130
+cover:
+  index_enable: true
+  aside_enable: false
+  archives_enable: false
+  default_cover: []
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: false
+    label: false
+  post:
+    position: left
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: false
+toc:
+  post: true
+  page: false
+  number: false
+  expand: false
+  style_simple: false
+  scroll_percent: false
+post_copyright:
+  enable: false
+related_post:
+  enable: false
+share:
+  use:
+code_blocks:
+  theme: light
+  macStyle: false
+  height_limit: false
+  word_wrap: false
+  copy: true
+  language: true
+  shrink: false
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: false
+  position: right
+  display:
+    archive: false
+    tag: false
+    category: false
+  card_author:
+    enable: true
+    description: 记录学习与研究，也留下一些生活的切片。
+    button:
+      enable: true
+      icon: fas fa-arrow-right
+      text: 关于我
+      link: /about/
+  card_announcement:
+    enable: false
+  card_recent_post:
+    enable: false
+  card_categories:
+    enable: true
+    limit: 6
+  card_tags:
+    enable: false
+  card_archives:
+    enable: false
+  card_webinfo:
+    enable: false
+
+math:
+  use: katex
+  per_page: true
+  hide_scrollbar: false
+  katex:
+    copy_tex: false
+search:
+  use: local_search
+  placeholder: 搜索笔记、综述与生活记录
+  local_search:
+    preload: false
+    top_n_per_article: 2
+    unescape: false
+    pagination:
+      enable: true
+      hitsPerPage: 8
+lightbox: medium_zoom
+photofigcaption: false
+readmode: true
+hr_icon:
+  enable: false
+rightside_config_animation: false
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: 1
+display_mode: light
+busuanzi:
+  site_uv: false
+  site_pv: false
+  page_pv: false
+lazyload:
+  enable: false
+pjax:
+  enable: false
+
+# Activated only after a real endpoint is configured; never show a broken form.
+comments:
+  use:
+  text: true
+  lazyload: true
+  count: false
+  card_post_count: false
+twikoo:
+  envId:
+  region:
+  visitor: false
+visitor_map:
+  # Paste your own MapMyVisitors embed script URL here, never someone else's ID.
+  script_url: 'https://mapmyvisitors.com/globe.js?d=vFjHOz1OZ6Wug0yG7h_AyRTALPEglf0DxUZ-B-0o4Ss'
+
+footer:
+  owner:
+    enable: true
+    since: 2025
+  copyright:
+    enable: true
+    version: false
+  custom_text: '<span class="footer-note">保持好奇，慢慢记录。</span>'
+theme_color:
+  enable: true
+  main: '#a25d43'
+  paginator: '#a25d43'
+  button_hover: '#85503c'
+  text_selection: '#e6c9b9'
+  link_color: '#a25d43'
+  toc_color: '#a25d43'
+  scroll_color: '#c4b7a9'
+  meta_theme_color_light: '#f7f5f0'
+  meta_theme_color_dark: '#222420'
+font:
+  global_font_size: 16px
+  code_font_size: 14px
+  font_family: '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif'
+  code_font_family: '"Cascadia Code", "SFMono-Regular", Consolas, monospace'
+inject:
+  head:
+    - '<link rel="stylesheet" href="/css/duke.css">'
+CDN:
+  internal_provider: local
+  third_party_provider: jsdelivr
+  version: true
+  option:
+    katex: /vendor/katex/katex.min.css

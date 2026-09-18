@@ -4,8 +4,8 @@
 
 # Site
 title: DUKE'S BLOG
-subtitle: 'Duke'
-description: 'Duke blog'
+subtitle: '学习、研究，和沿途的风景。'
+description: 'Duke Zhu 的个人博客，记录学习笔记、研究综述和生活见闻。'
 keywords:
 author: Duke Zhu
 language: zh-CN
@@ -58,6 +58,7 @@ prismjs:
 markdown:
   plugins:
     - "@traptitech/markdown-it-katex"
+    - "markdown-it-mark"
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -100,7 +101,12 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid
+theme: butterfly
+
+search:
+  path: search.xml
+  field: post
+  content: true
 
 
 # Deployment

@@ -1,8 +1,17 @@
 ---
 title: 关于我
 date: 2024-03-14 0:38:33
-layout: about
+layout: page
+type: about
+aside: false
+top_img: false
+comments: false
 ---
+
+<div class="about-profile">
+  <img src="/images/LeBlaine.jpg" alt="Duke Zhu 的头像" width="92" height="92">
+  <div><strong>Duke Zhu</strong><p>学习、研究，和沿途的风景。</p><p><a href="https://github.com/DukeZhu619">GitHub</a><a href="mailto:duke-zhu@outlook.com">Email</a></p></div>
+</div>
 
 ## 👨‍💻 关于我
 
