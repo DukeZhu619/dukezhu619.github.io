@@ -1,0 +1,23 @@
+# 首页横幅：海边研究工坊
+
+2026-09-18：用户选定方案 B，用于替换首页照片。
+
+- 通过内置 image_gen 生成，以用户提供的机器人贴纸照片作为角色外形参考。
+- 正式网站素材：`source/images/robot-coastal-workshop.jpg`，2172 × 724，3:1 全景；JPEG 质量 90，仅转换格式以减小体积，构图未变。
+- 原始预览保留在本地 `design-previews/robot-hero/robot-coastal-workshop.png`。
+- 桌面端完整展示全景；窄屏突出中部的编程、化学和讨论场景，标题移至图像上方。
+
+## 最终生成提示词
+
+```text
+Use case: illustration-story.
+Asset type: original panoramic hero illustration for a personal academic and life blog, two-dimensional finished artwork, not a web mockup. ULTRA-WIDE LANDSCAPE format 3:1, ideally 2400 x 800 pixels, compose the artwork for that panoramic format.
+Input image 1 is CHARACTER DESIGN REFERENCE ONLY: a sideways phone photo of robot stickers on a laptop. Use the distinctive lower sticker robots as the design vocabulary: small boxy off-white or grey industrial bodies, rounded rectangular or square heads, black face screens with two simple amber-orange or pale pixel eyes, dark articulated mechanical joints, little utilitarian panels, charming slightly clumsy poses. Interpret the robots upright. Do NOT depict the laptop, stickers, sticker outlines, brand lettering, product logos, or photo framing. Do NOT reproduce the unrelated yellow smiley.
+Primary request: a group of 8 original robots, all doing DIFFERENT recognizable research or learning activities. The scene should reward close looking and have artful hierarchy and gentle humor, not eight icons lined up. Each robot has a distinct silhouette and pose while belonging to the same robot family. Use varied poses and foreground/middle/background scale, thoughtful negative space, small coherent clusters and visual connections.
+Activities to include exactly once each: (1) chemistry researcher delicately using a pipette with a small glass flask rack, (2) programmer seated at an open laptop with minimal abstract colored code lines, (3) mathematician standing and gesturing toward a small dark slate bearing sparse abstract geometric chalk diagrams, (4) engineer crouching to adjust a tiny mechanism, (5) astronomer looking through a compact telescope, (6) note taker seated on a step with an open notebook, (7) naturalist examining a leaf using a magnifying lens, (8) one central discussing robot whose expressive hand gesture connects the scene.
+Composition for the website: keep the upper-left quarter restful, low contrast and lightly textured for a later dark blog-title overlay; leave modest quiet breathing space along the top for navigation. Integrate this open area naturally into the scene, not an empty white box. Main characters and important activity props occupy a broad central horizontal band to tolerate shallow hero cropping. Activities must be readable at banner scale, do not crowd the image with small clutter.
+No rendered title, no readable words or digits, no watermarks, no panels, no collage, no UI, no branding. No photorealism, no glossy 3D, no neon cyberpunk, no stock-tech blue glowing brain, no human characters. Precise pleasant mechanical anatomy, tools held convincingly, restrained detail. Scientific props are narrative decoration, not experimental instructions.
+Scene and historical composition: an open-air research workshop on broad stone terraces overlooking the sea, a long low desk and several shallow steps linking the activities. Borrow the graceful reclining, seated, bending and conversing group rhythms of classical pastoral paintings and Renaissance frescoes: an artfully composed continuous frieze with uneven clusters, not equal spacing or a rigid grid. A large open notebook on the left foreground becomes a small terraced platform, quietly blending study and landscape without surreal overload. One robot writes code at a desk, the chemist studies a flask on a neighboring bench, the engineer kneels over a mechanism, the note taker leans against a step, the naturalist examines a plant beside the terrace, the astronomer looks toward a small ochre moon, and two other robots discuss geometric ideas. Keep all eight roles legible and connected by pose and gaze. On the far upper-left, calm pale sky and a soft coastline give real negative space. Sea and distant hills lightly occupy the background, no central tourist landmark.
+Style/medium: refined retro-scientific picture-book illustration, hand-painted opaque gouache, fine dry-brush edges and a restrained printed paper texture. Warm cream and sage, deep petrol teal, terracotta, mustard highlights. Slightly livelier color and more whimsical movement than a formal academy, cozy curiosity and a little visual humor, crisp small silhouettes, no thick black cartoon outlines. Balance a beautiful coastal setting with the robots as the unmistakable main subject.
+```
+

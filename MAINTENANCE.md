@@ -16,6 +16,7 @@
 
 - Butterfly 版本锁定为 5.7.0，配置在 `_config.butterfly.yml`。
 - 自定义样式在 `source/css/duke.css`，不直接修改主题包。
+- 首页横幅为选定的“海边研究工坊”插画，文件 `source/images/robot-coastal-workshop.jpg`；桌面保留全景，手机显示中部研究场景，标题与导航避开主体。素材来源和提示词见 [横幅说明](docs/hero-art.md)。
 - 数学由 `@traptitech/markdown-it-katex` 构建时渲染，字体和样式随网站发布。
 - `scripts/site-assets.js` 负责公式资源和外部服务配置。
 - 页脚仅显示“已航行”的动态时长。计时起点在 `_config.butterfly.yml` 的 `footer.launch_at`，暂采用仓库最早保留的提交时间 `2025-03-16T14:40:40+08:00`，不代表已核实的首次建站时间；`source/js/site-journey.js` 每秒更新显示。
